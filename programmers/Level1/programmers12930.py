@@ -1,0 +1,1 @@
+solution = lambda s: ''.join([s[i].upper() for i, v in enumerate(s) if i % 2 == 0])
