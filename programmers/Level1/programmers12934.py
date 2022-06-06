@@ -1,0 +1,1 @@
+solution = lambda n: int((sqr + 1) ** 2) if ((sqr := n ** (1 / 2)) % 1 == 0) else -1
