@@ -1,1 +1,1 @@
-solution = lambda s: ''.join([s[i].upper() for i, v in enumerate(s) if i % 2 == 0])
+solution = lambda s: ' '.join([''.join([word[i].upper() if i % 2 == 0 else v.lower() for i, v in enumerate(word)]) for word in s.split(' ')])
