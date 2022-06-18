@@ -1,3 +1,21 @@
 def solution(new_id):
-    answer = ''
-    return answer
+    new_id = new_id.lower()
+    new_id = ''.join([char for char in new_id if char.isnumeric() or char.isalpha() or char in ['-', '_', '.']])
+    while '..' in new_id:
+        new_id = new_id.replace('..', '.')
+    if new_id and new_id[0] == '.':
+        new_id = new_id[1:]
+    if new_id and new_id[-1] == '.':
+        new_id = new_id[:-1]
+    if new_id == '':
+        new_id = 'a'
+    if len(new_id) >= 16:
+        new_id = new_id[0:15]
+        if new_id[-1] == '.':
+            new_id = new_id[:-1]
+    while len(new_id) <= 2:
+        new_id = new_id + new_id[-1]
+    return new_id
+
+
+print(solution("=.="))
