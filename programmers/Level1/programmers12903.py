@@ -1,2 +1,3 @@
-solution = lambda s: s[int(len(s) / 2): int(len(s) / 2) + 1 if len(s) % 2 == 1 else int(len(s) / 2) - 1: int(len(s) / 2) + 1]
-print(solution("qwer"))
+def solution(s):
+    div, mod = divmod(len(s), 2)
+    return s[div-1] + s[div] if mod == 0 else s[div]
