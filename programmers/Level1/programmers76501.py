@@ -1,0 +1,1 @@
+solution = lambda absolutes, signs: sum([x if y else -x for x, y in zip(absolutes, signs)])
